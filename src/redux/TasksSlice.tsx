@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction, nanoid } from '@reduxjs/toolkit';
-import { Task } from './types';
+import { TaskTypes } from './types';
 
-const tasksInitialState: Task[] = [
+const tasksInitialState: TaskTypes[] = [
   { id: "0", text: 'Do the dishes', completed: true, deleted: false },
   { id: "1", text: 'Take out the trash', completed: true, deleted: false },
   { id: "2", text: 'Clean the house', completed: false, deleted: false },
@@ -14,7 +14,7 @@ const tasksSlice = createSlice({
   initialState: tasksInitialState,
   reducers: {
     addTask: {
-      reducer: (state, action: PayloadAction<Task>) => {
+      reducer: (state, action: PayloadAction<TaskTypes>) => {
         state.push(action.payload);
       },
       prepare: (text: string) => {

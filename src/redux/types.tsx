@@ -1,5 +1,5 @@
 // Тип для задачи
-export interface Task {
+export interface TaskTypes {
   id: string;
   text: string;
   completed: boolean;
@@ -8,7 +8,7 @@ export interface Task {
 
 // Тип для состояния задач
 export interface TasksState {
-  tasks: Task[];
+  tasks: TaskTypes[];
 }
 
 // Тип для фильтра
