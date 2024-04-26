@@ -1,7 +1,7 @@
 import css from './Button.module.scss';
 
 interface ButtonProps {
-  type: 'submit';
+  type: 'submit' | 'button';
   children: React.ReactNode;
 }
 
