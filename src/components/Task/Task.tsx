@@ -1,14 +1,14 @@
 import { MdClose } from 'react-icons/md';
 import css from './Task.module.scss';
 
-type Task = {
+type TaskType = {
   id: number;
   text: string;
   completed: boolean;
 };
 
 type TaskProps = {
-  task: Task;
+  task: TaskType;
 };
 
 const Task = ({ task }: TaskProps) => {

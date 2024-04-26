@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link.active {
+  text-decoration: underline;
+}
