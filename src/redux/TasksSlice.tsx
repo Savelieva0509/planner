@@ -1,13 +1,18 @@
 import { createSlice, PayloadAction, nanoid } from '@reduxjs/toolkit';
-import { TaskTypes } from './types';
+import { TasksState, TaskTypes } from './types';
 
-const tasksInitialState: TaskTypes[] = [
-  { id: "0", text: 'Do the dishes', completed: true, deleted: false },
-  { id: "1", text: 'Take out the trash', completed: true, deleted: false },
-  { id: "2", text: 'Clean the house', completed: false, deleted: false },
-  { id: "3", text: 'Organize the closet', completed: false, deleted: true },
-  { id: "4", text: 'Cook a delicious meal', completed: false, deleted: true },
-];
+
+const tasksInitialState: TasksState = {
+  tasks: [
+    { id: '0', text: 'Do the dishes', completed: true, deleted: false },
+    { id: '1', text: 'Take out the trash', completed: true, deleted: false },
+    { id: '2', text: 'Clean the house', completed: false, deleted: false },
+  ],
+  deletedTasks: [
+    { id: '3', text: 'Organize the closet', completed: false, deleted: true },
+    { id: '4', text: 'Cook a delicious meal', completed: false, deleted: true },
+  ],
+};
 
 const tasksSlice = createSlice({
   name: 'tasks',
@@ -15,7 +20,7 @@ const tasksSlice = createSlice({
   reducers: {
     addTask: {
       reducer: (state, action: PayloadAction<TaskTypes>) => {
-        state.push(action.payload);
+        state.tasks.push(action.payload);
       },
       prepare: (text: string) => {
         return {
@@ -30,16 +35,16 @@ const tasksSlice = createSlice({
     },
     deleteTask(state, action) {
       const idToDelete = action.payload;
-      const deletedTaskIndex = state.findIndex(task => task.id === idToDelete);
+      const deletedTaskIndex = state.tasks.findIndex(task => task.id === idToDelete);
       if (deletedTaskIndex !== -1) {
-        const deletedTask = state.splice(deletedTaskIndex, 1)[0];
+        const deletedTask = state.tasks.splice(deletedTaskIndex, 1)[0];
         deletedTask.deleted = true;
-        state.push(deletedTask);
+        state.deletedTasks.push(deletedTask);
       }
     },
     toggleCompleted: (state, action) => {
       const idToToggle = action.payload;
-      const task = state.find(task => task.id === idToToggle);
+      const task = state.tasks.find(task => task.id === idToToggle);
       if (task) {
         task.completed = !task.completed;
       }

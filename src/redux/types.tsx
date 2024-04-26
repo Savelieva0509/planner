@@ -9,6 +9,7 @@ export interface TaskTypes {
 // Тип для состояния задач
 export interface TasksState {
   tasks: TaskTypes[];
+  deletedTasks: TaskTypes[];
 }
 
 // Тип для фильтра

@@ -15,6 +15,7 @@ const Task = ({ task }: TaskProps) => {
   const handleDelete = () => dispatch(deleteTask(task.id));
 
   const handleToggle = () => dispatch(toggleCompleted(task.id));
+  
   return (
     <div className={css.wrapper}>
       <input
