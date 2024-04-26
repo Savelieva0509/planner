@@ -6,7 +6,7 @@ const tasksInitialState: TaskTypes[] = [
   { id: "1", text: 'Take out the trash', completed: true, deleted: false },
   { id: "2", text: 'Clean the house', completed: false, deleted: false },
   { id: "3", text: 'Organize the closet', completed: false, deleted: true },
-    { id: "4", text: 'Cook a delicious meal', completed: false, deleted: true },
+  { id: "4", text: 'Cook a delicious meal', completed: false, deleted: true },
 ];
 
 const tasksSlice = createSlice({
