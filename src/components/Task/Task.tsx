@@ -4,7 +4,6 @@ import css from './Task.module.scss';
 import { deleteTask, toggleCompleted } from '.././../redux/tasksSlice';
 import { TaskTypes } from ".././../redux/types";
 
-  
 type TaskProps = {
   task: TaskTypes;
 };
