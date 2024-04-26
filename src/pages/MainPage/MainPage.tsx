@@ -1,11 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import Layout from '../../components/Layout/Layout';
+import AppBar from '../../components/AppBar/AppBar';
+import TaskForm from '../../components/TaskForm/TaskForm';
+import TaskList from '../../components/TaskList/TaskList';
+
+
+
 const MainPage = () => {
   return (
-    <div>
-      <h1>MainPage</h1>
-      <Link to="/archive">Go to Archive</Link>
-    </div>
+    <Layout>
+      <AppBar />
+      <TaskForm />
+      <TaskList />
+    </Layout>
   );
 };
 
