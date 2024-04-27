@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import AppBar from '../../components/AppBar/AppBar';
 import ArchiveList from '../../components/ArchiveList/ArchiveList';
 import Layout from '../../components/Layout/Layout';

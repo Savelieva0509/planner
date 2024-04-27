@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import { FaArrowRight } from 'react-icons/fa';
 import Filter from '../Filter/Filter';
+import TaskCounter from '../TaskCounter/TaskCounter';
 import css from './AppBar.module.scss';
 
 const AppBar = () => {
@@ -15,6 +16,7 @@ const AppBar = () => {
             TO ARCHIVE
             <FaArrowRight style={{ marginLeft: '10px' }} />
           </Link>
+          <TaskCounter />
           <Filter />
         </>
       ) : (
