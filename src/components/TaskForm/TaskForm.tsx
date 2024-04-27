@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { Formik, ErrorMessage, Field, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
-import { addTask } from '.././../redux/tasksSlice';
+import { addTask } from '../../redux/tasks-slice';
 import { FormValues } from '../../types';
 import Button from '../Button/Button';
 import css from './TaskForm.module.scss';
