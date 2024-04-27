@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import Button from '../Button/Button';
-import { statusFilters } from "../../redux/constants"
+import { statusFilters } from '../../redux/constants';
 import { getFilter } from '.././../redux/selectors';
 import { setFilter } from '.././../redux/filterSlice';
 import css from './Filter.module.scss';
@@ -9,7 +9,10 @@ const Filter = () => {
   const dispatch = useDispatch();
   const filter = useSelector(getFilter);
 
-  const handleFilterChange = (newFilter: string) => dispatch(setFilter(newFilter));
+  const handleFilterChange = (newFilter: string) => {
+    dispatch(setFilter(newFilter));
+  };
+
   return (
     <div className={css.wrapper}>
       <Button
