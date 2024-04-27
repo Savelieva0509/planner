@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
+import AppBar from '../../components/AppBar/AppBar';
 import ArchiveList from '../../components/ArchiveList/ArchiveList';
+import Layout from '../../components/Layout/Layout';
 
 const ArchivePage = () => {
   return (
-    <>
-      <h1>Archive</h1>
-      <Link to="/">Go to Main Page</Link>;
-      <ArchiveList/>
-    </>
+    <Layout>
+      <AppBar/>
+      <ArchiveList />
+    </Layout>
   );
 };
 

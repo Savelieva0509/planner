@@ -1,22 +1,23 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .link {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: #ffffff;
   text-decoration: none;
-  color: inherit;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
 }
 
 .link:hover {
-  text-decoration: underline;
+  background-color: #1565c0;
 }
 
-.link:focus {
-  outline: none;
-}
 
-.link.active {
-  text-decoration: underline;
-}

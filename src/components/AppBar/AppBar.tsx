@@ -1,12 +1,28 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 import Filter from '../Filter/Filter';
 import css from './AppBar.module.scss';
 
 const AppBar = () => {
+  const location = useLocation();
+  const isMainPage = location.pathname === '/';
   return (
     <div className={css.wrapper}>
-      <Link className={css.link} to="/archive">Go to Archive Page</Link>
-      <Filter/>
+      {isMainPage ? (
+        <>
+          <Link className={css.link} to="/archive">
+            TO ARCHIVE
+            <FaArrowRight style={{ marginLeft: '10px' }} />
+          </Link>
+          <Filter />
+        </>
+      ) : (
+        <Link className={css.link} to="/">
+          <FaArrowLeft style={{ marginRight: '10px' }} />
+          TO MAIN
+        </Link>
+      )}
     </div>
   );
 };
