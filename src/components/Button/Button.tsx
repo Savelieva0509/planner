@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={clsx(css.btn, {[css.isSelected]: selected })}
+      className={clsx(css.btn, { [css.isSelected]: selected })}
       type={type}
       {...otherProps}
     >
@@ -26,4 +26,3 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 export default Button;
-

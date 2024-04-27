@@ -9,7 +9,6 @@ const getVisibleTasks = (
   tasks: TasksState['tasks'],
   statusFilter: FilterStatus
 ) => {
-  console.log('getVisibleTasks called with:', tasks, statusFilter);
   switch (statusFilter) {
     case statusFilters.active: {
       return tasks.filter(task => !task.completed);
@@ -25,12 +24,7 @@ const getVisibleTasks = (
 const TaskList = () => {
   const tasks = useSelector(getTasks);
   const filter = useSelector(getFilter);
-  console.log('TaskList called with:', filter);
   const visibleTasks = getVisibleTasks(tasks, filter);
-
-   console.log('Tasks:', tasks);
-   console.log('Status filter:', statusFilters);
-
 
   return (
     <ul className={css.list}>

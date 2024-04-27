@@ -28,5 +28,5 @@ export interface RootState {
 
 // Определение типа значений формы
 export interface FormValues {
-  task: string; 
+  task: string;
 }

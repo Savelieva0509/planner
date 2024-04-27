@@ -5,7 +5,7 @@ import Layout from '../../components/Layout/Layout';
 const ArchivePage = () => {
   return (
     <Layout>
-      <AppBar/>
+      <AppBar />
       <ArchiveList />
     </Layout>
   );
