@@ -25,3 +25,8 @@ export interface RootState {
   tasks: TasksState;
   filter: FilterState;
 }
+
+// Определение типа значений формы
+export interface FormValues {
+  task: string; 
+}
