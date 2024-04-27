@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction, nanoid } from '@reduxjs/toolkit';
+
 import { TaskTypes, TasksState } from './types';
 
 const initialState: TasksState = {

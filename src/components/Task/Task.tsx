@@ -4,7 +4,6 @@ import css from './Task.module.scss';
 import { deleteTask, toggleCompleted } from '../../redux/tasksSlice';
 import { TaskTypes } from ".././../redux/types";
 
-  
 type TaskProps = {
   task: TaskTypes;
 };
@@ -16,6 +15,7 @@ const Task = ({ task }: TaskProps) => {
   const handleDelete = () => dispatch(deleteTask(task.id));
 
   const handleToggle = () => dispatch(toggleCompleted(task.id));
+  
   return (
     <div className={css.wrapper}>
       <input

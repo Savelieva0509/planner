@@ -9,9 +9,8 @@ export interface TaskTypes {
 // Тип для состояния задач
 export interface TasksState {
   tasks: TaskTypes[];
-  deletedTasks: TaskTypes[]; // Добавляем новое поле для хранения удаленных задач
+  deletedTasks: TaskTypes[];
 }
-
 
 // Тип для фильтра
 export type FilterStatus = 'all' | 'completed' | 'active';
@@ -26,4 +25,3 @@ export interface RootState {
   tasks: TasksState;
   filter: FilterState;
 }
-

@@ -1,11 +1,10 @@
 import { useSelector } from 'react-redux';
-import { getDeletedTasks } from '.././../redux/selectors'; 
+import { getDeletedTasks } from '.././../redux/selectors';
 import tasksListCss from '../TaskList/TaskList.module.scss';
 import taskCss from '../Task/Task.module.scss';
 
 const ArchiveList = () => {
-    const deletedTasks = useSelector(getDeletedTasks); 
-    console.log(deletedTasks);
+  const deletedTasks = useSelector(getDeletedTasks);
 
   return (
     <ul className={tasksListCss.list}>
