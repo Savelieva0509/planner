@@ -1,4 +1,4 @@
-import { RootState } from './types';
+import { RootState } from '../types';
 
 export const getTasks = (state: RootState) => state.tasks.tasks;
 
