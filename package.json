@@ -2,7 +2,7 @@
   "name": "planner",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Savelieva0509.github.io/planner",
+  "homepage": "https://Savelieva0509.github.io/planner/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
     "@types/node": "^20",
